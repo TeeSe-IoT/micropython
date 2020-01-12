@@ -1,0 +1,61 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.pythonPath": "C:\\Develope\\building\\python\\python.exe",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.jediEnabled": false,
+		"python.linting.pylintArgs": [
+			"--init-hook",
+			"import sys; sys.path.insert(0, 'c:/Develope/templates/esp32-micropython-vscode/lib')",
+			"--disable",
+			"missing-module-docstring"
+		],		
+		"python.testing.nosetestsEnabled": false,
+		"python.testing.pytestEnabled": false,
+		"python.testing.unittestEnabled": true,
+		"python.testing.unittestArgs": [
+			"-v",
+			"-s",
+			"test",
+			"-p",
+			"test_*.py"
+			]
+		},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Project",
+				"type": "python",
+				"request": "launch",
+				"program": "main.py",
+				"console": "integratedTerminal"
+			}
+		],
+		"compounds": []
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Micropython: Start REPL",
+				"type": "shell",
+				"group": "none",
+				"command": "${cwd}\\build\\micropython.exe -i",
+				"problemMatcher": []
+			},
+			{
+				"label": "Micropython: Run Main",
+				"type": "shell",
+				"group": "none",
+				"command": "${cwd}\\build\\micropython.exe main.py",
+				"problemMatcher": []
+			}
+		]
+	}
+}
