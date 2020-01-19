@@ -13,7 +13,7 @@
 			"--init-hook",
 			"import sys; sys.path.insert(0, 'c:/Develope/templates/esp32-micropython-vscode/lib')",
 			"--disable",
-			"missing-module-docstring"
+			"missing-module-docstring, line-too-long, too-few-public-methods, not-context-manager"
 		],		
 		"python.testing.nosetestsEnabled": false,
 		"python.testing.pytestEnabled": false,
