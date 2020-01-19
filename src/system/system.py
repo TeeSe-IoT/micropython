@@ -52,7 +52,7 @@ class Device:
                     __control = src.system.Station(src.system.Device, __name, src.system.Device.__servicehandler)
                     Device.Items.append(__control)
                 #pylint: enable-msg=protected-access
-        pass
+        #
 #
 class Control:
     """

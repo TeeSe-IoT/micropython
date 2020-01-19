@@ -15,6 +15,8 @@ def eventnothing(event: int, *args):
     print('Event Nothing!')
 #
 class Loop:
+    """ thread class
+    """
     def __init__(self, timespan, function, *functionargs):
         self.__active = False
         self.__function = function
@@ -23,10 +25,14 @@ class Loop:
         self.__thread = object
     #
     def start(self):
+        """ started the thread
+        """
         self.__thread = thread.start_new_thread(self.__worker, ())
         self.__active = True
     #
     def stop(self):
+        """ stopped the thread
+        """
         self.__active = False
     #
     def __worker(self):

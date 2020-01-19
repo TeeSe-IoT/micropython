@@ -32,7 +32,7 @@ class Simulation(Board):
                 pass
             elif __device == 'Station':
                 pass
-        if __return != None:
+        if __return != '':
             self.service.transmitter(__return, ('localhost', 64001))
     #
     def __station(self, payload: {}):
